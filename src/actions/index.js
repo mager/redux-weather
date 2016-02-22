@@ -12,9 +12,11 @@ export const FETCH_WEATHER = 'FETCH_WEATHER';
 export function fetchWeather(city) {
   // Make API request
   const url = `${ROOT_URL}&q=${city},${COUNTRY}`;
-
   const request = axios.get(url);
 
+  console.log('Request:', request);
+
+  // We are returning the promise as the payload
   return {
     type: FETCH_WEATHER,
     payload: request
