@@ -5,7 +5,8 @@ export default function(state = [], action) {
   switch (action.type) {
     case FETCH_WEATHER:
       // Never manipulate state directly like `state.push(action)`
-      return [ action.payload.data, ...state]; // [ city, city, city ]
+      return [ action.payload.data, ...state ]; // [ city, city, city ]
   }
+  
   return state;
 }
